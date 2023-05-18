@@ -10,11 +10,16 @@ namespace Cainos.PixelArtTopDown_Basic
 
         private Animator animator;
 
+        //Tutorial
+        public Camera cam;
+
+        //Tutorial
+        Vector2 mousePos;
+
         private void Start()
         {
             animator = GetComponent<Animator>();
         }
-
 
         private void Update()
         {
@@ -45,6 +50,9 @@ namespace Cainos.PixelArtTopDown_Basic
             animator.SetBool("IsMoving", dir.magnitude > 0);
 
             GetComponent<Rigidbody2D>().velocity = speed * dir;
+
+            //Tutorial
+            cam.ScreenToWorldPoint(Input.mousePosition);
         }
     }
 }
