@@ -10,11 +10,14 @@ namespace Cainos.PixelArtTopDown_Basic
 
         private Animator animator;
 
-        //Tutorial
+        //----- Tutorial -----
+
+        public Rigidbody2D rb;
         public Camera cam;
 
-        //Tutorial
         Vector2 mousePos;
+
+        //----- End Tutorial -----
 
         private void Start()
         {
@@ -51,8 +54,18 @@ namespace Cainos.PixelArtTopDown_Basic
 
             GetComponent<Rigidbody2D>().velocity = speed * dir;
 
-            //Tutorial
-            cam.ScreenToWorldPoint(Input.mousePosition);
+            //----- Tutorial ----- 
+
+            mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+
         }
+
+        private void FixedUpdate()
+        {
+            Vector2 lookDir = mousePos - rb.position;
+            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        }
+
     }
 }
