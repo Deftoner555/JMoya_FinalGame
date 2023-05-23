@@ -12,9 +12,12 @@ namespace Cainos.PixelArtTopDown_Basic
 
         //----- Tutorial -----
 
+        public float moveSpeed = 5f;
+
         public Rigidbody2D rb;
         public Camera cam;
 
+        Vector2 movement;
         Vector2 mousePos;
 
         //----- End Tutorial -----
@@ -56,6 +59,9 @@ namespace Cainos.PixelArtTopDown_Basic
 
             //----- Tutorial ----- 
 
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+
             mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
 
@@ -63,8 +69,16 @@ namespace Cainos.PixelArtTopDown_Basic
 
         private void FixedUpdate()
         {
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
             Vector2 lookDir = mousePos - rb.position;
             float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+            //rb.rotation = angle;
+        }
+
+        public Vector2 GetMousePosition()
+        {
+            return mousePos;
         }
 
     }
