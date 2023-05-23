@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1307283928187335429}
   - component: {fileID: 1307283928187335428}
   - component: {fileID: 5855052308849312960}
-  - component: {fileID: 9190806211622702330}
   - component: {fileID: 307917851290153652}
-  m_Layer: 20
+  - component: {fileID: 8499299819223091515}
+  m_Layer: 22
   m_Name: Energy Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,22 +106,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!58 &9190806211622702330
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1307283928187335431}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.011128965, y: -0.030736089}
-  serializedVersion: 2
-  m_Radius: 1.2117195
 --- !u!114 &307917851290153652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,3 +118,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8f8d7d95571fe74cac59ed3395c75b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
+--- !u!58 &8499299819223091515
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307283928187335431}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.2
