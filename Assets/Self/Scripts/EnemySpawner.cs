@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
 
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefabs; //array of enemy prefabs
     public Transform spawnPoint;
     public float spawnDelay = 3f;
     public int maxEnemyCount = 10;
@@ -32,7 +32,10 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        int randomIndex = Random.Range(0, enemyPrefabs.Length);
+        GameObject randomEnemyPrefab = enemyPrefabs[randomIndex];
+        
+        Instantiate(randomEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
     }
 
     public void StopSpawning()
