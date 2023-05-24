@@ -135,6 +135,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Fox
       objectReference: {fileID: 0}
+    - target: {fileID: 5472114302240984418, guid: 226a90da30ee5c24aa10388349036e97,
+        type: 3}
+      propertyPath: m_Layer
+      value: 19
+      objectReference: {fileID: 0}
     - target: {fileID: 5472114302240984430, guid: 226a90da30ee5c24aa10388349036e97,
         type: 3}
       propertyPath: m_RootOrder

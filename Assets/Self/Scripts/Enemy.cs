@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    public int health = 3;
+    public int eHealth = 3;
     public float moveSpeed = 3f;
     public int damageAmount = 1;
 
@@ -33,16 +33,16 @@ public class Enemy : MonoBehaviour
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(damageAmount);
+                playerHealth.TakePDamage(damageAmount);
             }
         }
     }
 
-    public void TakeDamage (int damage)
+    public void TakeEDamage (int Edamage)
     {
-        health -= damage;
+        eHealth -= Edamage;
 
-        if (health <= 0)
+        if (eHealth <= 0)
         {
             Die();
         }

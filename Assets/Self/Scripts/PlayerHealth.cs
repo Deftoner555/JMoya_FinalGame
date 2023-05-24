@@ -13,9 +13,9 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(int damage)
+    public void TakePDamage(int pDamage)
     {
-        currentHealth -= damage;
+        currentHealth -= pDamage;
 
         if (currentHealth <= 0)
         {
