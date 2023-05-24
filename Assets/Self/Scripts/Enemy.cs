@@ -44,11 +44,11 @@ public class Enemy : MonoBehaviour
 
         if (eHealth <= 0)
         {
-            Die();
+            dieEnemy();
         }
     }
 
-    void Die()
+    void dieEnemy()
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy (gameObject);

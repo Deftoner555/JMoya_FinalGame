@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5472114302240984429}
   - component: {fileID: 5472114302240984419}
   - component: {fileID: 6357829032606837740}
-  m_Layer: 20
+  m_Layer: 19
   m_Name: Enemy_Fox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a01c75bdeb533d74eb05aa7caa7bb378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  eHealth: 3
   moveSpeed: 3
   damageAmount: 1
 --- !u!60 &6357829032606837740
