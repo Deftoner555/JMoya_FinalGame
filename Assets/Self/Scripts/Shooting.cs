@@ -35,7 +35,7 @@ public class Shooting : MonoBehaviour
         rb.AddForce(shootDirection * bulletForce, ForceMode2D.Impulse);
 
         Collider2D bulletCollider = bullet.GetComponent<Collider2D>();
-        bulletCollider.isTrigger = true;
+        //bulletCollider.isTrigger = true;
     }
 
 }
