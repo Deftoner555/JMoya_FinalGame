@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public delegate void EnemyDefeatedAction();
+
 
 public class EnemySpawner : MonoBehaviour
 {
+    public event EnemyDefeatedAction OnEnemyDefeated;
 
+    public int GetCurrentEnemyCount()
+    {
+        return currentEnemyCount;
+    }
     public GameObject[] enemyPrefabs; //array of enemy prefabs
     public Transform spawnPoint;
     public float spawnDelay = 3f;

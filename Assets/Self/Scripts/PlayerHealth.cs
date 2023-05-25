@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-
+    public event Action OnPlayerDeath;
     public int maxHealth = 5;
     private int currentHealth;
 

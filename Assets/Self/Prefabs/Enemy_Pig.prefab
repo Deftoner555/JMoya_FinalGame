@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 597535443402527447}
   - component: {fileID: 597535443402527444}
-  - component: {fileID: 309324380177780738}
   - component: {fileID: 6207675189434555997}
+  - component: {fileID: 309324380177780738}
   m_Layer: 19
   m_Name: Enemy_Pig
   m_TagString: Untagged
@@ -84,6 +84,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6207675189434555997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597535443402527445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01c75bdeb533d74eb05aa7caa7bb378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eHealth: 4
+  moveSpeed: 3
+  damageAmount: 1
 --- !u!61 &309324380177780738
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -110,18 +125,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3615837, y: 0.2560429}
   m_EdgeRadius: 0
---- !u!114 &6207675189434555997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 597535443402527445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a01c75bdeb533d74eb05aa7caa7bb378, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eHealth: 4
-  moveSpeed: 3
-  damageAmount: 1
